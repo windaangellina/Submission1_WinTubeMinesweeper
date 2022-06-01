@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="m2_tugas.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#minesweeper">Minesweeper</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div style="text-align: center;" id="home">
+                <p class="web-title">WinTube Entertainment</p>
+                <p class="web-slogan">
+                    high quality entertainment at your fingertips
+                </p>
+            </div>    
+            <div class="section-content bg-black">
+                <div class="container">
+                    <div class="display-wrap">
+                        <div class="content">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nLeiVZ9BDKA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
+                        </div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, et minus sed cupiditate consequatur, illo esse eos excepturi repudiandae provident est neque saepe, ab accusamus quas voluptatem doloribus ratione aliquam?
+            
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique nemo eos in explicabo inventore consectetur doloremque, autem, error nam corporis laudantium aliquam dolore. In odio, magni placeat itaque molestias aut!
+            
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem officia id asperiores reprehenderit obcaecati minima perferendis ratione. Architecto harum reiciendis quod ipsam recusandae quo assumenda, rerum consequatur odit, aliquam libero.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, et minus sed cupiditate consequatur, illo esse eos excepturi repudiandae provident est neque saepe, ab accusamus quas voluptatem doloribus ratione aliquam?
+            
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique nemo eos in explicabo inventore consectetur doloremque, autem, error nam corporis laudantium aliquam dolore. In odio, magni placeat itaque molestias aut!
+            
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem officia id asperiores reprehenderit obcaecati minima perferendis ratione. Architecto harum reiciendis quod ipsam recusandae quo assumenda, rerum consequatur odit, aliquam libero.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="display-wrap">
+                        <div class="content">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nLeiVZ9BDKA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
+                        </div>
+                        <div class="content">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DIgv-e18OzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="content">
+                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/qi52KQs67MY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JtOMlDLxEy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </article>
+        
+        <article>
+            <div style="text-align: center;" id="minesweeper">
+                <p class="web-title">Play Minesweeper</p>
+                <p class="web-slogan">
+                    Simple Minesweeper For Simple Fun Time
+                </p>
+            </div>
+            <div class="section-content">
+                <div class="container container-minesweeper">
+                    <div class="setting-group">
+                        <label for="txtX">X : </label>
+                        <input type="text" class="txtField" id="txtX"><br>
+                    </div>
+                    <div class="setting-group">
+                        <label for="txtY">Y : </label>
+                        <input type="text" class="txtField" id="txtY"><br>
+                    </div>            
+                    <div class="setting-group">
+                        <label for="cbMode">Difficulty : </label>
+                        <select id="cbMode" onchange="getMode()">
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option>Hard</option>
+                        </select><br>
+                    </div>
+                    <button type="button" class="btn" id="btnPlay" onclick="generateGameTable()">Play</button>
+                    <button type="button" class="btn" id="btnReset" onclick="resetGame(true)">Reset Game</button>
+                    <div style="margin-top: 30px;">
+                        <table id="game-table" class="table"></table>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <aside>
+            <div class="section-content bg-black" >                
+                <div style="text-align: center;" id="home">
+                    <p class="web-title text-bisque">About</p>
+                    <p class="web-slogan text-bisque">
+                        Hi! I'm Winda Angelina Utama
+                    </p>
+                </div>  
+                <div class="container" id="about">
+                    <div class="display-wrap">
+                        <div class="content">
+                            <img src="bio.png" width="200px">
+                        </div>
+                        <div class="content">
+                            <p>
+                                I'm a target-oriented Fourth Year Business Information System student minoring in Information Science. Highly analytical, motivated, and skilled at optimizing systems and solving programming problems. Can work well both independently and in a team.
+                            </p>
+                            <div>
+                                <p>
+                                    Here is my work experience :
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Aug 2020 - Jun 2022 : Laboratory Teaching Assistant at ISTTS
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Jun 2021 - Oct 2021 : Backend Developer at OMNI IT Consulting
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Feel free to send me a message through <a href="https://www.linkedin.com/in/winda-angelina-utama/" target="_blank" class="link">LinkedIn</a> if you have job offers or simply want to talk!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div>  
+        </aside>
+    </main>
+    
+
+    
+
+    <footer class="footer">
+        Belajar Dasar Pemrograman Web &copy; Winda Angelina Utama
+    </footer>
+    
+    <script src="m2_tugas.js"></script>
+    
+</body>
+</html>
